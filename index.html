@@ -26,15 +26,16 @@
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
+
+  <!-- Add your site or application content here -->
+  <p>Welcome to the Assistant Website!</p>'
+  <p>Click the button below to access routes.</p>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
@@ -46,8 +47,11 @@
 
 <p id="demo"></p>
 
+<a href="map.html">Die</a>
+
 <script>
   var x = document.getElementById("demo");
+
   function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -61,21 +65,6 @@
       "<br>Longitude: " + position.coords.longitude;
   }
 </script>
-
-<div style="background-color:lightblue">
-  <script>
-    var defaultLayers = platform.createDefaultLayers();
-
-    // Instantiate (and display) a map object:
-    var map = new H.Map(
-      document.getElementById('mapContainer'),
-      defaultLayers.normal.map,
-      {
-        zoom: 10,
-        center: { lat: 52.5, lng: 13.4 }
-      });
-  </script>
-</div>
 
 </body>
 
