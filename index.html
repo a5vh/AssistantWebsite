@@ -1,73 +1,24 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='type/css'>
+    <link href='css/main.css' rel="stylesheet" type="text/css">
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <body>
+    <h1>Hello There!</h1>
+    <img src="favicon.ico" alt="My test image">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <p>Hello, I am</p>
+    <ul>
+      <li>having fun</li>
+      <li>my project is not working</li>
+    </ul>
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+    <p>and still bad</p>
 
-  <meta name="theme-color" content="#fafafa">
-  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-  <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
-          type="text/javascript" charset="utf-8"></script>
-  <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
-          type="text/javascript" charset="utf-8"></script>
-</head>
-
-<body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-
-  <!-- Add your site or application content here -->
-  <p>Welcome to the Assistant Website!</p>'
-  <p>Click the button below to access routes.</p>
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-
-<button onclick="getLocation()">Get Location</button>
-
-<p id="demo"></p>
-
-<a href="map.html">Die</a>
-
-<script>
-  var x = document.getElementById("demo");
-
-  function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-  }
-
-  function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-      "<br>Longitude: " + position.coords.longitude;
-  }
-</script>
-
-</body>
-
-
-
+    <a href="404.html">Hello</a>
+  </body>
 </html>
