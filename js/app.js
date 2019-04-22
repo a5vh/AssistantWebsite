@@ -1,3 +1,5 @@
+
+
 /**
  * Calculates and displays a car route from the Brandenburg Gate in the centre of Berlin
  * to Friedrichstraße Railway Station.
@@ -13,7 +15,7 @@ function calculateRouteFromAtoB (platform) {
       mode: 'fastest;car',
       representation: 'display',
       routeattributes : 'waypoints,summary,shape,legs',
-      maneuverattributes: 'direction,action',
+      manueverattributes: 'direction,action',
       waypoint0: '52.5160,13.3779', // Brandenburg Gate
       waypoint1: '52.5206,13.3862'  // Friedrichstraße Railway Station
     };
@@ -33,11 +35,11 @@ function calculateRouteFromAtoB (platform) {
  */
 function onSuccess(result) {
   var route = result.response.route[0];
-  /*
-   * The styling of the route response on the map is entirely under the developer's control.
-   * A representitive styling can be found the full JS + HTML code of this example
-   * in the functions below:
-   */
+ /*
+  * The styling of the route response on the map is entirely under the developer's control.
+  * A representitive styling can be found the full JS + HTML code of this example
+  * in the functions below:
+  */
   addRouteShapeToMap(route);
   addManueversToMap(route);
 
@@ -78,9 +80,9 @@ var defaultLayers = platform.createDefaultLayers();
 //Step 2: initialize a map - this map is centered over Berlin
 var map = new H.Map(mapContainer,
   defaultLayers.normal.map,{
-    center: {lat:52.5160, lng:13.3779},
-    zoom: 13
-  });
+  center: {lat:52.5160, lng:13.3779},
+  zoom: 13
+});
 
 //Step 3: make the map interactive
 // MapEvents enables the event system
@@ -99,7 +101,7 @@ var bubble;
  * @param  {String} text              The contents of the infobubble.
  */
 function openBubble(position, text){
-  if(!bubble){
+ if(!bubble){
     bubble =  new H.ui.InfoBubble(
       position,
       // The FO property holds the province name.
@@ -148,7 +150,7 @@ function addManueversToMap(route){
   var svgMarkup = '<svg width="18" height="18" ' +
     'xmlns="http://www.w3.org/2000/svg">' +
     '<circle cx="8" cy="8" r="8" ' +
-    'fill="#1b468d" stroke="white" stroke-width="1"  />' +
+      'fill="#1b468d" stroke="white" stroke-width="1"  />' +
     '</svg>',
     dotIcon = new H.map.Icon(svgMarkup, {anchor: {x:8, y:8}}),
     group = new  H.map.Group(),
@@ -162,8 +164,8 @@ function addManueversToMap(route){
       maneuver = route.leg[i].maneuver[j];
       // Add a marker to the maneuvers group
       var marker =  new H.map.Marker({
-          lat: maneuver.position.latitude,
-          lng: maneuver.position.longitude} ,
+        lat: maneuver.position.latitude,
+        lng: maneuver.position.longitude} ,
         {icon: dotIcon});
       marker.instruction = maneuver.instruction;
       group.addObject(marker);
@@ -173,7 +175,7 @@ function addManueversToMap(route){
   group.addEventListener('tap', function (evt) {
     map.setCenter(evt.target.getPosition());
     openBubble(
-      evt.target.getPosition(), evt.target.instruction);
+       evt.target.getPosition(), evt.target.instruction);
   }, false);
 
   // Add the maneuvers group to the map
@@ -194,11 +196,11 @@ function addWaypointsToPanel(waypoints){
     i;
 
 
-  for (i = 0;  i < waypoints.length; i += 1) {
+   for (i = 0;  i < waypoints.length; i += 1) {
     waypointLabels.push(waypoints[i].label)
-  }
+   }
 
-  nodeH3.textContent = waypointLabels.join(' - ');
+   nodeH3.textContent = waypointLabels.join(' - ');
 
   routeInstructionsContainer.innerHTML = '';
   routeInstructionsContainer.appendChild(nodeH3);
@@ -210,9 +212,9 @@ function addWaypointsToPanel(waypoints){
  */
 function addSummaryToPanel(summary){
   var summaryDiv = document.createElement('div'),
-    content = '';
-  content += '<b>Total distance</b>: ' + summary.distance  + 'm. <br/>';
-  content += '<b>Travel Time</b>: ' + summary.travelTime.toMMSS() + ' (in current traffic)';
+   content = '';
+   content += '<b>Total distance</b>: ' + summary.distance  + 'm. <br/>';
+   content += '<b>Travel Time</b>: ' + summary.travelTime.toMMSS() + ' (in current traffic)';
 
 
   summaryDiv.style.fontSize = 'small';
@@ -239,7 +241,7 @@ function addManueversToPanel(route){
   nodeOL.style.marginRight ='5%';
   nodeOL.className = 'directions';
 
-  // Add a marker for each maneuver
+     // Add a marker for each maneuver
   for (i = 0;  i < route.leg.length; i += 1) {
     for (j = 0;  j < route.leg[i].maneuver.length; j += 1) {
       // Get the next maneuver.
