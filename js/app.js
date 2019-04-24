@@ -1,5 +1,4 @@
 
-
 /**
  * Calculates and displays a car route from the Brandenburg Gate in the centre of Berlin
  * to Friedrichstraße Railway Station.
@@ -34,6 +33,7 @@ function calculateRouteFromAtoB (platform) {
  * see: http://developer.here.com/rest-apis/documentation/routing/topics/resource-type-calculate-route.html
  */
 function onSuccess(result) {
+  //var route = result.response.route[0];
   var route = result.response.route[0];
  /*
   * The styling of the route response on the map is entirely under the developer's control.
