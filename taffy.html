@@ -1,0 +1,22 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="/taffy.js" type="text/javascript"></script>
+
+  <p id="demo"></p>
+  <script>
+
+    var cities = TAFFY([{ goal: "Hello", goal: "Die" }]);
+
+    cities.insert({goal:"Hell"});
+
+    console.log(cities().last());
+
+    document.getElementById("demo").innerHTML = cities().last();
+  </script>
+</head>
+<body>
+</body>
+
+</html>
+
