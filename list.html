@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <link href="css/list.css" rel="stylesheet" type="text/css">
-  <script src="https://github.com/typicaljoe/taffydb/raw/master/taffy.js"></script>
+  <script src="/taffy.js" type="application/javascript"></script>
 
   <script>
-    var goals = TAFFY({goal:"Get groceries"}, {goal:"Workout"});
+    var goals = TAFFY({goal: "Get groceries"}, {goal: "Workout"});
 
-    goals.insert({goal:"Help"});
+    goals.insert({goal: "Help"});  
 
-    alert(goals({goal:"Get groceries"}).count());
+    console.log(goals().first());
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -100,7 +100,13 @@
           div.style.display = "none";
         }
       }
-    }
+      updateList();
+      }
+
+  function updateList() {
+    var li = document.getElementById("myUL");
+    
+  }
   </script>
 
 </body>
