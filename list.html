@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <link href="css/list.css" rel="stylesheet" type="text/css">
-  <script src="/taffy.js" type="application/javascript"></script>
 
-  <script>
-    var goals = TAFFY({goal: "Get groceries"}, {goal: "Workout"});
+  <script src="taffy.js" type="text/javascript">
+    var goals = TAFFY({ goal: "Get groceries" }, { goal: "Workout" });
 
-    goals.insert({goal: "Help"});  
-
-    console.log(goals().first());
+ 
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -81,6 +78,7 @@
       var inputValue = document.getElementById("myInput").value;
       var t = document.createTextNode(inputValue);
       li.appendChild(t);
+      console.log(t);
       if (inputValue === '') {
         alert("You must write something!");
       } else {

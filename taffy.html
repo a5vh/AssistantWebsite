@@ -4,21 +4,17 @@
   <script src="taffy.js" type="text/javascript"></script>
 </head>
 <body>
-  <p id="demo">Wow</p>
-
   <script>
+    var cities = TAFFY
+      ([
+        {goal: "Get stuff done"},
+        {goal: "Kill myself"}
+      ]);
 
-    var cities = TAFFY([{goal: "Die" }]);
+    var help = new Array();
+    var help = cities().select("goal");
 
-    cities.insert({ goal: "Hell" });
-    cities.insert({ goal: "Im gay" });
-    cities.insert({ goal: "10" });
-
-    var item1 = cities({goals: "Hell"})
-
-    document.getElementById("demo").innerHTML = item1;
-
-    write(item1);
+    document.write("<p>" + help[0] + "<p>");
 
   </script>
 </body>
