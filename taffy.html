@@ -6,15 +6,14 @@
 <body>
   <script>
     var cities = TAFFY
-      ([
-        {goal: "Get stuff done"},
-        {goal: "Kill myself"}
-      ]);
+      ([ goal: "hello"]);
 
     var help = new Array();
     var help = cities().select("goal");
 
     document.write("<p>" + help[0] + "<p>");
+
+    console.log(cities().goal)
 
   </script>
 </body>

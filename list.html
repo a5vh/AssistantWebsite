@@ -4,11 +4,8 @@
   <meta charset="UTF-8">
   <link href="css/list.css" rel="stylesheet" type="text/css">
 
-  <script src="taffy.js" type="text/javascript">
-    var goals = TAFFY({ goal: "Get groceries" }, { goal: "Workout" });
-
- 
-  </script>
+  <script src="taffy.js" type="text/javascript"></script>
+  <script src="js/script.js" type="text/javascript"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -34,77 +31,7 @@
   </ul>
 
   <script>
-    // Create a "close" button and append it to each list item
-    var myNodelist = document.getElementsByTagName("LI");
-    var i;
-    var list = [];
-    for (i = 0; i < myNodelist.length; i++) {
-      var span = document.createElement("SPAN");
-      var txt = document.createTextNode("\u00D7");
-      span.className = "close";
-      span.appendChild(txt);
-      myNodelist[i].appendChild(span);
-
-      for (i = 0; i < myNodelist.length; i++) {
-        list.set(myNodelist.get(i), i);
-      }
-
-      for (i = 0; i < list.size; i++) {
-        console.log(list.get(i));
-      }
-    }
-
-    // Click on a close button to hide the current list item
-    var close = document.getElementsByClassName("close");
-    var i;
-    for (i = 0; i < close.length; i++) {
-      close[i].onclick = function() {
-        var div = this.parentElement;
-        div.style.display = "none";
-      }
-    }
-
-    // Add a "checked" symbol when clicking on a list item
-    var list = document.querySelector('ul');
-    list.addEventListener('click', function(ev) {
-      if (ev.target.tagName === 'LI') {
-        ev.target.classList.toggle('checked');
-      }
-    }, false);
-
-    // Create a new list item when clicking on the "Add" button
-    function newElement() {
-      var li = document.createElement("li");
-      var inputValue = document.getElementById("myInput").value;
-      var t = document.createTextNode(inputValue);
-      li.appendChild(t);
-      console.log(t);
-      if (inputValue === '') {
-        alert("You must write something!");
-      } else {
-        document.getElementById("myUL").appendChild(li);
-      }
-      document.getElementById("myInput").value = "";
-
-      var span = document.createElement("SPAN");
-      var txt = document.createTextNode("\u00D7");
-      span.className = "close";
-      span.appendChild(txt);
-      li.appendChild(span);
-
-      for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-          var div = this.parentElement;
-          div.style.display = "none";
-        }
-      }
-      updateList();
-      }
-
-  function updateList() {
-    var li = document.getElementById("myUL");
     
-  }
   </script>
 
 </body>
