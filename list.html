@@ -107,7 +107,7 @@ function updateList() {
   var db = new Array();
   var db = goals().select("goal");
 
-  for (i = db.length-1; i < db.length; i++)
+  for (i = db.length; i < db.length; i++)
   {
     var li = document.createElement("li");
     var t = document.createTextNode(db[i]);
